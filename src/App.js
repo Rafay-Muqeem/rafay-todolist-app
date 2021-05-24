@@ -1,11 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './Main';
+import {Provider} from 'react-redux';
+import {configureStore} from './redux/Store';
+
+const store = configureStore();
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>This is testing</h1>
-    </div>
+    <Provider store = {store}>
+      <div className="myContainer">
+        <h1 className="header">ToDo List</h1>
+        <Main />
+      </div>
+    </Provider>
   );
 }
 
