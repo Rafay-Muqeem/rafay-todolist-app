@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 function Main(props) {
+    
     return(
         <div>
             <List state = {props.state} Del_todo = {props.Del_todo} Del_all = {props.Del_all} />

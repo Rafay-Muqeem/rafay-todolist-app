@@ -1,19 +1,26 @@
 import './App.css';
 import Main from './Main';
 import {Provider} from 'react-redux';
-import {configureStore} from './redux/Store';
+import {store} from './redux/Store';
+import { useSpring, animated } from 'react-spring';
 
-const store = configureStore();
 
 function App() {
 
+  const animate = useSpring({
+    from: {opacity: 0, margin:-500},
+    to: {opacity:1, margin:0}
+  })
+
   return (
-    <Provider store = {store}>
-      <div className="myContainer">
-        <h1 className="header">ToDo List</h1>
-        <Main />
-      </div>
-    </Provider>
+        <Provider store = {store}>
+          <animated.div style={animate}>
+            <div className="myContainer">
+              <h1 className="header">ToDo List</h1>
+              <Main />
+            </div>
+          </animated.div>
+        </Provider>
   );
 }
 
