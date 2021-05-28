@@ -20,6 +20,3 @@ export const Del_all = () => ({
     type: ActionTypes.DEL_ALL
 });
 
-export const Animate = () => ({
-    type: ActionTypes.ANIMATE
-});

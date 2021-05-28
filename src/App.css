@@ -37,6 +37,11 @@
   padding: 0px 5px;
 }
 
+.both-btn{
+  display: flex;
+  justify-content: space-around;
+}
+
 .addTodo {
   padding: 15px;
 }
